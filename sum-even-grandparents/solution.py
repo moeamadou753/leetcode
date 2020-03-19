@@ -29,6 +29,8 @@ class Solution:
         """
         """ Optimized solution 1:
             - Pre-order DFS using python stacks for flair
+            Time complexity: O(n)
+            Runtime: 92ms
         """
         if not root: return 0  # empty tree
 
@@ -50,6 +52,8 @@ class Solution:
         """ Initial solution:
             - One solution would be to work from the top-down, seeing whether or not the node is even and adding the grandchildrens' sums to our accumulated result (if the node is a grandparent)
             - Define helper function to return list of grandchildren vals
+            Time complexity: O(n) with lots of operations
+            Runtime: 132ms
         """
 #         if root is None: return 0
 #         return self.sumEvenGrandparent(root.left) + self.sumEvenGrandparent(root.right) + (sum(self.getGrandchildren(root)) if root.val % 2 == 0 else 0)
