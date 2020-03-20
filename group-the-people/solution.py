@@ -2,7 +2,9 @@ class Solution:
     def groupThePeople(self, G: List[int]) -> List[List[int]]:
         """ Optimized solution 1:
             - Convert list to a set to remove duplicates of group sizes
-            -
+            - Use a defaultdict(list) to allow arbitrary item access
+            - Append all indices to the groupsize
+            - Return a slice of the various sections of the array by iterating through the # of each of the items w/ a specific group size divided by the group size
         """
         S, D = set(G), collections.defaultdict(list)
         for i, g in enumerate(G): D[g].append(i)

@@ -28,5 +28,8 @@ groupSizes.length == n
 ## 💬 Approach
 My initial approach was very basic. I first cleaned the array into a dictionary where the keys were group sizes and the values were a list of IDs with that group size. I then iterated through those lists to create my groups and appended to the final solution after each grouping.
 
-I came across another approach that turned my ~20 line code to 3 lines using `collections.defaultdict(type)` -- a python data structure that essentially gets rid of key errors. Whenever accessing the element k in the dictionary, it assumes that the value is of type `type` and generates the empty state of this key and value. 
 ## 🤓 Learnings 
+I came across another approach that turned my ~20 line code to 3 lines using `collections.defaultdict(type)` -- a python data structure that essentially gets rid of key errors. Whenever accessing the element k in the dictionary, it assumes that the value is of type `type` and generates the empty state of this key and value.
+
+I will remember to try and implement array slicing wherever it makes sense, as it can lead to the simplification of a lot of code. 
+
